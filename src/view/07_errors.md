@@ -16,7 +16,7 @@ fn NumericInput() -> impl IntoView {
     view! {
         <label>
             "Type an integer (or not!)"
-            <input type="number" on:input:target=move |ev| {
+            <input on:input:target=move |ev| {
               // when input changes, try to parse a number from the input
               set_value.set(ev.target().value().parse::<i32>())
             }/>
@@ -76,7 +76,7 @@ fn NumericInput() -> impl IntoView {
         <h1>"Error Handling"</h1>
         <label>
             "Type a number (or something that's not a number!)"
-            <input type="number" on:input:target=move |ev| {
+            <input on:input:target=move |ev| {
                 // when input changes, try to parse a number from the input
                 set_value.set(ev.target().value().parse::<i32>())
             }/>
@@ -159,7 +159,7 @@ fn App() -> impl IntoView {
         <h1>"Error Handling"</h1>
         <label>
             "Type a number (or something that's not a number!)"
-            <input type="number" on:input:target=move |ev| {
+            <input on:input:target=move |ev| {
                 // when input changes, try to parse a number from the input
                 set_value.set(ev.target().value().parse::<i32>())
             }/>
